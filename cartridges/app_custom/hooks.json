@@ -1,0 +1,9 @@
+{
+    "hooks": [
+        {
+            "name": "my.custom.hook",
+            "script": "./cartridge/scripts/hooks/myHook.js"
+        }
+     
+    ]
+}

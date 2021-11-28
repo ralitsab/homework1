@@ -6,7 +6,7 @@
         },
         {
             "name": "dw.order.calculateShipping",
-            "script": "./cartridge/scripts/hooks/cart/calculate.js"
+        "script": "./cartridge/scripts/hooks/cart/calculate.js"
         },
         {
             "name": "dw.order.calculateTax",
