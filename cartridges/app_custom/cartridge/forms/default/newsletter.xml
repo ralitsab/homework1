@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<field 
+formid="email" 
+		label="label.input.email.newsletter" 
+		mandatory="true" 
+		missing-error="error.message.required" 
+		type="string" />
+
+		<field 
+formid="firstname" 
+		label="label.input.firstname.newsletter" 
+		mandatory="true" 
+		missing-error="error.message.required" 
+		type="string" />
+
+		<field 
+formid="lastname" 
+		label="label.input.lastname.newsletter" 
+		mandatory="true" 
+		missing-error="error.message.required" 
+		type="string" />
+
+
+	<field
+		formid="gender" 
+		label="label.input.gender.newsletter" 
+		type="string"
+		missing-error="error.message.required"/>
+
+</form>
