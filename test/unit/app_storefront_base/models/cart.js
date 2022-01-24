@@ -1,6 +1,8 @@
 'use strict';
 
+
 var assert = require('chai').assert;
+
 var ArrayList = require('../../../mocks/dw.util.Collection');
 
 var toProductMock = require('../../../util');

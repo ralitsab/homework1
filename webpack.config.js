@@ -5,6 +5,7 @@ var webpack = require('sgmf-scripts').webpack;
 var ExtractTextPlugin = require('sgmf-scripts')['extract-text-webpack-plugin'];
 var jsFiles = require('sgmf-scripts').createJsPath();
 var scssFiles = require('sgmf-scripts').createScssPath();
+const optionator = require('optionator')(require('./node_modules/sgmf-scripts/lib/utils/options'));
 
 var bootstrapPackages = {
     Alert: 'exports-loader?Alert!bootstrap/js/src/alert',
@@ -20,13 +21,28 @@ var bootstrapPackages = {
     Util: 'exports-loader?Util!bootstrap/js/src/util'
 };
 
+// Defaults
+const cwd = process.cwd();
+const packageJson = require(path.join(cwd, './package.json'));
+let packageName = packageJson.packageName || packageJson.name;
+const options = optionator.parse(process.argv);
+if (options.cartridgeName) {
+    packageName = options.cartridgeName;
+}
 module.exports = [{
-    mode: 'production',
+    mode: 'development',
     name: 'js',
     entry: jsFiles,
     output: {
-        path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        path: path.resolve(
+            './cartridges/' + packageName + '/cartridge/static'
+        ),
         filename: '[name].js'
+    },
+    resolve: {
+        alias: {
+            base: path.resolve(__dirname, 'cartridges/app_storefront_base/cartridge/client/default/js')
+        }
     },
     module: {
         rules: [
@@ -49,7 +65,9 @@ module.exports = [{
     name: 'scss',
     entry: scssFiles,
     output: {
-        path: path.resolve('./cartridges/app_storefront_base/cartridge/static'),
+        path: path.resolve(
+            './cartridges/' + packageName + '/cartridge/static'
+        ),
         filename: '[name].css'
     },
     module: {

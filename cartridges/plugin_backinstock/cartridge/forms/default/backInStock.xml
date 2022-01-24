@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+    <field formid="phone" label="label.input.phone.backInStock" type="string" mandatory="true"
+           min-length="10" max-length="20" missing-error="error.message.required"
+           range-error="error.message.between10and20"/>
+    <field formid="pid" label="label.input.phone.backInStock" type="string" mandatory="true"
+         />
+</form>

@@ -1,0 +1,17 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.SendSMS",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "true",
+                "description": "",
+                "module": "plugin_backinstock/cartridge/scripts/job/sendSMS.js",
+                "function": "sendSMS",
+                "transactional": "true",
+                "timeout-in-seconds": "900"
+            }
+        ]
+    }
+}

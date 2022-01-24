@@ -114,10 +114,14 @@
     "last 2 versions",
     "ie >= 10"
   ],
-  "packageName": "app_storefront_base",
+  "packageName": "plugin_backinstock",
   "babel": {
     "presets": [
       "env"
     ]
+  },
+  "paths": {
+    "base": ".cartridges/app_storefront_base/",
+    "plugin_backinstock": "./cartridges/plugin_backinstock/"
   }
 }

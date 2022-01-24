@@ -12,7 +12,7 @@
     <isobject object="${product.raw}" view="detail" />
         <div class="container product-detail product-wrapper" data-pid="${product.id}">
             <div class="row">
-                <div class="col-12">
+                <div clajss="col-12">
                     <!--Breadcrumbs-->
                     <div class="product-breadcrumb d-md-none">
                         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
@@ -40,6 +40,7 @@
                     </div>
 
                     <!-- Product Name -->
+        
                     <div class="row">
                         <div class="col">
                             <h1 class="product-name hidden-sm-down">${product.productName}</h1>
