@@ -1,4 +1,0 @@
-<div class="container">
-    <h2 class='text-center'>${pdict.data.name, pdict.data.starship_class, pdict.data.manufactuer}</h2>
-    
-</div>
